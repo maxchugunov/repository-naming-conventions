@@ -16,10 +16,16 @@ We strictly distinguish between "mandatory" and "optional" data retrieval:
 *   **`Many`**: Used when retrieving a specific subset (usually by a list of IDs).
 *   **`All`**: Used to retrieve all records without filtering.
 
-### 3. Specification Pattern (`BySpec`)
+### 3. Specific Criteria (Property-based search)
+When searching by a specific field or unique property, append the property name to the prefix:
+*   **`getByName(string $name): User`**: Guaranteed to return a User or throw an Exception.
+*   **`findByEmail(string $email): ?User`**: Returns User if found, otherwise `null`.
+*   **`findManyByStatus(Status $status): array`**: Returns a collection f
+* 
+### 4. Specification Pattern (`BySpec`)
 For complex or dynamic filtering, use the **Specification** pattern to keep the interface clean.
 
-### 4. Data Mutation (`add`, `update`, `remove`)
+### 5. Data Mutation (`add`, `update`, `remove`)
 Avoid generic CRUD terms like `create` or `delete`. Use collection-oriented terminology:
 *   **`add`**: For new entities.
 *   **`update`**: For existing entities.
