@@ -1,5 +1,3 @@
-markdown
-
 # Repository Naming Conventions
 
 This repository defines the naming standards for Repository interfaces. These rules ensure a consistent, expressive, and predictable Data Access Layer (DAL).
