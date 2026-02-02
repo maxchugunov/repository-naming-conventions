@@ -75,12 +75,24 @@ interface UserRepositoryInterface
      */
     public function updateMany(array $users): void;
 
+    /**
+     * @throws UserRemoveException
+     */
     public function remove(int $id): void;
 
+    /**
+     * @throws UserRemoveException
+     */
     public function removeMany(array $ids): void;
 
+    /**
+     * @throws UserRemoveException
+     */
     public function removeBySpec(Spec $spec): void;
 
+    /**
+     * @throws UserRemoveException
+     */
     public function removeAll(): void;
 
     /** @throws UserGetException */
